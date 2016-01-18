@@ -20,7 +20,7 @@ LIBGCC 		:= $(shell $(CC) $(KBUILD_CFLAGS) -print-libgcc-file-name)
 KBUILD_DEFCONFIG := defconfig
 
 KBUILD_CFLAGS	+= -mgeneral-regs-only
-KBUILD_CFLAGS	+= -fno-pic
+KBUILD_CFLAGS	+= -fno-pic -Wno-memset-transposed-args -Wno-unused-const-variable -Wno-misleading-indentation -Wno-tautological-compare -Wno-bool-compare
 KBUILD_CFLAGS	+= $(GRAPHITE) $(EXTRA_OPTS) $(CORTEX_OPTS)
 ifeq ($(CONFIG_CPU_BIG_ENDIAN), y)
 KBUILD_CPPFLAGS	+= -mbig-endian

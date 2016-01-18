@@ -377,7 +377,8 @@ LINUXINCLUDE    := \
 KBUILD_CPPFLAGS := -D__KERNEL__
 
 KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-aliasing \
-                   -fno-common -Werror-implicit-function-declaration -Wno-format-security -fmodulo-sched \
+                   -fno-common -Werror-implicit-function-declaration -Wno-format-security -fmodulo-sched -Wno-bool-compare \
+                   -Wno-memset-transposed-args -Wno-unused-const-variable -Wno-misleading-indentation -Wno-tautological-compare \
                    -fgcse-after-reload -fno-delete-null-pointer-checks -ftree-loop-vectorize -ftree-loop-distribute-patterns \
                    -ftree-slp-vectorize -fvect-cost-model -ftree-partial-pre -fgcse-lm -fgcse-sm -fsched-spec-load \
                    -fmodulo-sched-allow-regmoves -ffast-math -funswitch-loops -fpredictive-commoning -fsingle-precision-constant \
