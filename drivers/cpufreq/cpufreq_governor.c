@@ -301,6 +301,8 @@ int cpufreq_governor_dbs(struct cpufreq_policy *policy,
 			rc = cdata->init_ex(dbs_data, policy);
 		} else if (cdata->governor == GOV_ZZMOOVE) {
 			rc = cdata->init_zz(dbs_data, policy);
+		} else if (cdata->governor == GOV_CONSERVATIVE) {
+			rc = cdata->init_cs(dbs_data, policy);
 		} else {
 			rc = cdata->init(dbs_data);
 		}
