@@ -1,7 +1,7 @@
 #
 # Makefile for the Linux unix domain socket layer.
 #
-
+CFLAGS_KERNEL := -Wno-unused-variable
 obj-$(CONFIG_UNIX)	+= unix.o
 
 unix-y			:= af_unix.o garbage.o
