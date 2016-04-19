@@ -1,6 +1,10 @@
 #
 # Makefile for the linux memory manager.
 #
+CFLAGS_KERNEL := -Wno-implicit-function-declaration -Wno-discarded-qualifiers -Wno-int-conversion
+
+KASAN_SANITIZE_slab_common.o := n
+KASAN_SANITIZE_slub.o := n
 
 mmu-y			:= nommu.o
 mmu-$(CONFIG_MMU)	:= fremap.o highmem.o madvise.o memory.o mincore.o \
@@ -64,3 +68,5 @@ obj-$(CONFIG_PAGE_OWNER) += pageowner.o
 obj-$(CONFIG_ZBUD)	+= zbud.o
 obj-$(CONFIG_GENERIC_EARLY_IOREMAP) += early_ioremap.o
 obj-$(CONFIG_ZSMALLOC)	+= zsmalloc.o
+obj-$(CONFIG_PROCESS_RECLAIM)	+= process_reclaim.o
+obj-$(CONFIG_ZPOOL)	+= zpool.o
