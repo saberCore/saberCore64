@@ -19,7 +19,7 @@ TOOLCHAIN_DIR="${HOME}/toolchain"
 
 # Kernel Details
 BASE_AK_VER="fuckery"
-VER=".4.7-p"
+VER=".4.71-p"
 AK_VER="$BASE_AK_VER$VER"
 
 
