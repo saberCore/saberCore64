@@ -19,7 +19,7 @@ TOOLCHAIN_DIR="${HOME}/toolchain"
 
 # Kernel Details
 BASE_AK_VER="fuckery"
-VER=".stealth.2"
+VER=".stealth.2.01"
 AK_VER="$BASE_AK_VER$VER"
 
 
@@ -30,7 +30,7 @@ export ARCH=arm64
 export SUBARCH=arm64
 export KBUILD_BUILD_USER=f100cleveland
 export KBUILD_BUILD_HOST=BuildBox
-export CROSS_COMPILE="$TOOLCHAIN_DIR/aarch64-linux-android-6.1-linaro/bin/aarch64-linux-android-"
+export CROSS_COMPILE="$TOOLCHAIN_DIR/aarch64-6.1/bin/aarch64-"
 if [ "$USE_CCACHE" = 1 ]; then
    export CROSS_COMPILE="ccache $CROSS_COMPILE"
 else
