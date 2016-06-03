@@ -384,6 +384,9 @@ KBUILD_CFLAGS   := -Wall -Wundef -Wstrict-prototypes -Wno-trigraphs -fno-strict-
                    -fmodulo-sched-allow-regmoves -ffast-math -funswitch-loops -fpredictive-commoning -fsingle-precision-constant \
 		   -std=gnu89 $(GRAPHITE) $(EXTRA_OPTS) $(CORTEX_OPTS)
 
+# GCC 6.1 is too strict
+KBUILD_CFLAGS	+= -Wno-misleading-indentation -Wno-tautological-compare
+
 KBUILD_AFLAGS_KERNEL := $(GRAPHITE) $(CORTEX_OPTS)
 KBUILD_CFLAGS_KERNEL := $(GRAPHITE) $(EXTRA_OPTS) $(CORTEX_OPTS)
 KBUILD_AFLAGS   := -D__ASSEMBLY__
