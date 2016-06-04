@@ -19,7 +19,7 @@ TOOLCHAIN_DIR="${HOME}/toolchain"
 
 # Kernel Details
 BASE_AK_VER="fuckery"
-VER=".stealth.2.01"
+VER=".stealth.2.02"
 AK_VER="$BASE_AK_VER$VER"
 
 
